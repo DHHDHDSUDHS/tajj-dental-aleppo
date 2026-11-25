@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تاج لتجميل وطب الأسنان | Tajj Dental Clinic — حلب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        clinic: {
+                            dark: '#063729',     /* أخضر زمردي عميق للثقة */
+                            primary: '#059669',  /* أخضر طبي أساسي */
+                            accent: '#10b981',   /* أخضر حيوي للأزرار */
+                            light: '#ecfdf5',    /* أخضر فاتح جداً للخلفيات */
+                            surface: '#f8fafc',  /* أبيض مائل للرمادي الهادئ */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Header & Pill Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-clinic-primary text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg text-clinic-dark block leading-none">تاج لتجميل وطب الأسنان</span>
+                    <span class="text-xs text-slate-500 font-medium">Tajj Dental Clinic — حلب</span>
+                </div>
+            </a>
+
+            <!-- Center Pill Menu (Desktop) -->
+            <nav class="hidden md:flex items-center bg-clinic-dark text-white px-6 py-2.5 rounded-full gap-7 text-sm font-medium shadow-sm">
+                <a href="#home" class="text-emerald-300 font-semibold">الرئيسية</a>
+                <a href="#services" class="hover:text-emerald-300 transition">خدمات الأسنان</a>
+                <a href="#about" class="hover:text-emerald-300 transition">لماذا تاج؟</a>
+                <a href="#faq" class="hover:text-emerald-300 transition">الأسئلة الشائعة</a>
+                <a href="#location" class="hover:text-emerald-300 transition">الموقع والتواصل</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#booking" class="bg-clinic-accent hover:bg-clinic-primary text-white px-5 py-2.5 rounded-full text-sm font-bold transition shadow-sm flex items-center gap-2">
+                <span>حجز موعد</span>
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-12 pb-16 lg:pt-20 lg:pb-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Right Column: Editorial Copy -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-clinic-light text-clinic-primary text-xs font-bold border border-emerald-200">
+                    <span class="w-2 h-2 rounded-full bg-clinic-primary"></span>
+                    <span>حلب | تاج لتجميل وطب الأسنان — Tajj Dental Clinic</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 leading-[1.2]">
+                    ابتسامة متكاملة بإشراقة <br class="hidden sm:block">
+                    <span class="text-clinic-primary">ودقة سنية حديثة في حلب.</span>
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    في عيادة تاج لتجميل وطب الأسنان (Tajj Dental Clinic) بحلب، نجمع بين تجميل الابتسامة، العلاجات الترميمية، والرعاية السنية المتواصلة في بيئة معقمة ومريحة تناسب احتياجاتكم في أي وقت.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#booking" class="bg-clinic-accent hover:bg-clinic-primary text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition shadow-md shadow-emerald-600/15 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>احجز موعدك عبر واتساب</span>
+                    </a>
+                    <a href="#services" class="px-7 py-3.5 rounded-full font-bold text-sm sm:text-base text-slate-700 border border-slate-200 hover:border-clinic-primary hover:text-clinic-primary transition">
+                        استعراض الخدمات
+                    </a>
+                </div>
+
+                <!-- Trust Badge Row -->
+                <div class="pt-4 flex items-center gap-6 text-sm text-slate-600 border-t border-slate-100">
+                    <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                        <i class="fa-solid fa-clock text-clinic-primary"></i>
+                        <span>متاح 24 ساعة</span>
+                        <span class="text-slate-400 font-normal">للحجز والاستفسار</span>
+                    </div>
+                    <span class="text-slate-300">|</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-virus text-clinic-primary"></i>
+                        <span>تعقيم قياسي معتمد</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Column: Clean Clinic Visual Card -->
+            <div class="lg:col-span-5">
+                <div class="relative rounded-3xl overflow-hidden bg-clinic-light border border-emerald-100 p-3 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" 
+                         alt="تاج لتجميل وطب الأسنان في حلب" 
+                         class="w-full h-[380px] object-cover rounded-2xl">
+                    
+                    <!-- Floating Status Card -->
+                    <div class="bg-white rounded-2xl p-4 shadow-md border border-slate-100 mt-3 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-full bg-clinic-light text-clinic-primary flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500">حجز ومواعيد مباشرة عبر واتساب</div>
+                                <div class="font-bold text-slate-900 text-sm" dir="ltr">+963 988 326 353</div>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-clinic-primary text-xs font-bold">24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Green Stats Bar -->
+    <section class="px-4 -mt-4 mb-16">
+        <div class="max-w-7xl mx-auto bg-clinic-dark rounded-3xl p-8 sm:p-10 text-white shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                <div class="bg-clinic-accent rounded-2xl p-6 text-white shadow-md">
+                    <div class="text-xs uppercase tracking-wider font-bold opacity-90 mb-1">جماليات وصحة الفم</div>
+                    <div class="text-2xl font-extrabold mb-2">تجميل وطب أسنان</div>
+                    <p class="text-xs leading-relaxed opacity-95">حلول تجميلية وعلاجية متكاملة لابتسامة طبيعية ومتناسقة.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">24/7</div>
+                    <div class="font-bold text-sm mt-1">استقبال وتنسيق مستمر</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">مرونة عالية في جدولة المواعيد واستقبال الحالات.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">100%</div>
+                    <div class="font-bold text-sm mt-1">تعقيم وسلامة طبية</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">التزام كامل ببروتوكولات التعقيم وحماية المراجعين.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">حلب</div>
+                    <div class="font-bold text-sm mt-1">رعاية سنية قريبة منك</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">تواصل فوري عبر واتساب لتأكيد الموعد بسهولة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Services Section -->
+    <section id="services" class="py-20 px-4 bg-clinic-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-clinic-primary font-bold text-sm">خدماتنا السنية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">علاجات وتجميل أسنان بمعايير حديثة</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-3">نقدم خطط علاج وتجميل مصممة لكل مراجع للحفاظ على صحة الأسنان ومنح ابتسامة واثقة.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-regular fa-face-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">تجميل الأسنان والابتسامة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">تصميم وتحسين مظهر الابتسامة باستخدام العدسات التجميلية والتركيبات المتناسقة مع شكل الوجه.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز استشارة تجميل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">تبييض وتنظيف الأسنان</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">إزالة التصبغات والجير وتبييض الأسنان بأسلوب آمن يحافظ على المينا ويمنح إشراقة واضحة.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز جلسة تبييض</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">الحشوات التجميلية والترميم</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">ترميم الأسنان المتضررة بمواد عالية الجودة بلون قريب جداً من اللون الطبيعي للأسنان.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز موعد ترميم</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">علاج الجذور والأعصاب</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">معالجة التهابات العصب والجذور بعناية ودقة للحفاظ على السن الطبيعي وتخفيف الألم.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز موعد علاج</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-teeth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">التعويضات والتركيبات السنية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">تركيبات وتيجان سنية متقنة لاستعادة وظيفة المضغ والمظهر الجمالي بشكل مريح ومستقر.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>استفسر عن التركيبات</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">العناية باللثة والفحص الدوري</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">فحص وقائي شامل وعلاج التهابات اللثة مع متابعة مستمرة للحفاظ على صحة الفم والأسنان.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز فحصاً دورياً</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Philosophy & FAQ -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="bg-clinic-light rounded-3xl p-6 border border-emerald-100">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-clinic-dark text-white flex items-center justify-center text-2xl font-bold">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-slate-900">تاج لتجميل وطب الأسنان</h3>
+                                <p class="text-clinic-primary text-sm font-semibold">Tajj Dental Clinic — حلب</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            نحرص في عيادة تاج على تقديم خدمة سنية تجمع بين المظهر الجمالي الطبيعي والراحة أثناء العلاج، مع سهولة التواصل وحجز المواعيد عبر واتساب.
+                        </p>
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <div class="p-3 rounded-xl bg-clinic-surface text-xs font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle text-clinic-primary"></i>
+                                <span>نتائج تجميلية طبيعية</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-clinic-surface text-xs font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle text-clinic-primary"></i>
+                                <span>حجز سريع عبر واتساب</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div id="faq" class="lg:col-span-7 space-y-4">
+                <span class="text-clinic-primary font-bold text-sm">إجابات واضحة</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">الأسئلة الشائعة للمراجعين</h2>
+
+                <div class="faq-item active border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>كيف يمكنني حجز موعد في عيادة تاج بحلب؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">يمكنك إرسال طلب الحجز مباشرة عبر نموذج الموقع أو التواصل عبر واتساب العيادة على الرقم 0988326353 لتحديد الموعد المناسب لك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>هل تقدم العيادة خدمات التجميل والعلاج معاً؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">نعم، نوفر خدمات طب الأسنان العلاجي والترميمي إلى جانب خدمات التجميل، التبييض، والتركيبات لضمان صحة الأسنان وجمالها معاً.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>هل يمكنني الاستفسار عن حالتي قبل الحضور؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">بالتأكيد، يمكنك إرسال استفسارك عبر واتساب العيادة وسنقوم بالرد وتنسيق موعد الكشف المناسب لحالتك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking, Location & Interactive Google Map Section -->
+    <section id="booking" class="py-16 px-4 bg-clinic-surface">
+        <div class="max-w-7xl mx-auto bg-clinic-dark rounded-3xl overflow-hidden shadow-xl grid lg:grid-cols-12">
+            
+            <!-- Location, Hours & Interactive Map -->
+            <div id="location" class="lg:col-span-5 p-8 sm:p-10 text-white flex flex-col justify-between bg-gradient-to-br from-clinic-dark to-emerald-950">
+                <div class="space-y-5">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-800/70 text-emerald-200 text-xs font-bold">الموقع والتواصل</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold leading-snug">احجز موعدك مع تاج لتجميل وطب الأسنان</h2>
+
+                    <div class="space-y-3.5 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">العنوان</div>
+                                <div class="text-emerald-100/80">حلب، سوريا</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-regular fa-clock text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">التوفر والحجز</div>
+                                <div class="text-emerald-100/80">متاح 24 ساعة للتنسيق وحجز المواعيد</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">واتساب وهاتف العيادة</div>
+                                <div class="text-emerald-100/80" dir="ltr">+963 988 326 353</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Maps Embed (Aleppo) -->
+                    <div class="pt-2">
+                        <div class="rounded-2xl overflow-hidden border border-emerald-700/60 shadow-lg bg-emerald-900/40">
+                            <iframe 
+                                title="موقع تاج لتجميل وطب الأسنان Tajj Dental Clinic - حلب"
+                                src="https://maps.google.com/maps?q=%D8%AA%D8%A7%D8%AC%20%D9%84%D8%AA%D8%AC%D9%85%D9%8A%D9%84%20%D9%88%D8%B7%D8%A8%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86%20Tajj%20Dental%20Clinic%20%D8%AD%D9%84%D8%A8&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                                class="w-full h-48 border-0" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=تاج+لتجميل+وطب+الأسنان+Tajj+Dental+Clinic+حلب" target="_blank" rel="noopener noreferrer" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 hover:text-white transition">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>فتح الموقع في تطبيق خرائط جوجل للملاحة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pt-5 mt-5 border-t border-emerald-800/60 text-xs text-emerald-200/70">
+                    * أرسل طلب الحجز وسنقوم بتأكيد الموعد المناسب مباشرة عبر واتساب.
+                </div>
+            </div>
+
+            <!-- Clean White Booking Form -->
+            <div class="lg:col-span-7 p-8 sm:p-12 bg-white flex flex-col justify-center">
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-2">نموذج حجز موعد</h3>
+                <p class="text-slate-500 text-sm mb-6">سيتم فتح محادثة واتساب جاهزة ببياناتك لإرسالها إلى العيادة بضغطة واحدة.</p>
+
+                <form id="clinicBookingForm" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">الاسم الكامل *</label>
+                            <input type="text" id="pName" required placeholder="أدخل اسمك الكريم" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">الخدمة المطلوبة</label>
+                            <select id="pService" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm bg-white">
+                                <option value="تجميل الأسنان والابتسامة">تجميل الأسنان والابتسامة</option>
+                                <option value="تبييض وتنظيف الأسنان">تبييض وتنظيف الأسنان</option>
+                                <option value="فحص واستشارة سنية">فحص واستشارة سنية</option>
+                                <option value="حشوات تجميلية / علاج جذور">حشوات تجميلية / علاج جذور</option>
+                                <option value="تركيبات وتيجان سنية">تركيبات وتيجان سنية</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">اليوم والوقت المفضل</label>
+                        <input type="text" id="pTime" placeholder="مثال: غداً فترة بعد الظهر" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">ملاحظات إضافية (اختياري)</label>
+                        <textarea id="pNotes" rows="3" placeholder="اذكر أي استفسار أو حالة خاصة..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-clinic-accent hover:bg-clinic-primary text-white font-bold py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>إرسال طلب الحجز عبر واتساب</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <div class="font-bold text-slate-700">تاج لتجميل وطب الأسنان — Tajj Dental Clinic</div>
+            <div>حلب، سوريا | جميع الحقوق محفوظة © 2026</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        document.getElementById('clinicBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('pName').value.trim();
+            const service = document.getElementById('pService').value;
+            const time = document.getElementById('pTime').value.trim() || 'أقرب موعد متاح';
+            const notes = document.getElementById('pNotes').value.trim();
+
+            let text = `مرحباً عيادة تاج لتجميل وطب الأسنان، أرغب بحجز موعد:%0A`;
+            text += `• الاسم: ${name}%0A`;
+            text += `• الخدمة: ${service}%0A`;
+            text += `• الموعد المفضل: ${time}`;
+            if (notes) {
+                text += `%0A• ملاحظات: ${notes}`;
+            }
+
+            window.open(`https://wa.me/963988326353?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
